@@ -17,7 +17,8 @@
 <body>
   <!-- navbar to start -->
   <!-- <div class="mb-8"></div> -->
-  <div class="bg-[#DEC2BC] p-3 sticky top-0">
+   <header class="sticky top-0">
+  <div class="bg-[#DEC2BC] p-3 ">
 
     <nav class="">
       <div class="container mx-auto lg:pl-32 lg:pr-32 ">
@@ -40,17 +41,18 @@
   <!-- navbar to end -->
 
   <!-- button section start -->
-  <div class="mb-14"></div>
-  <div class="container mx-auto lg:pl-32 lg:pr-32 mb-10">
+
+  <div class="container mx-auto lg:pl-32 lg:pr-32 mb-10 bg-white pt-8 pb-6">
     <div class="text-center">
       <button id="button-click1" class="mr-12 btn bg-[#B4F461]">Donation</button>
      <button id="button-click2" class="btn  p-3 w-24 border rounded-xl font-bold">History</button>
     </div>
   </div>
+</header>
   <!-- button section end -->
 
   <!-- card section start 1 -->
-
+<section id="donation-page" class="">
   <div class="container mx-auto lg:pl-32 lg:pr-32 mb-5">
     <div class="">
       <div id="text-button" class="grid grid-cols-2 items-center border rounded-2xl p-5">
@@ -199,18 +201,21 @@
       </div>
     </div>
   </div>
-
+</section>
 
   <!-- History ----------------------- -->
 
-  <section>
-    <div>
-      <h2></h2>
+  <section id="histories-page" class="w-11/12 mx-auto hidden">
+    <div class="border rounded-md p-6">
+      <h2>Donate for Flood at Noakhali, Bangladesh</h2>
+      <p>The recent floods in Noakhali have caused significant damage to homes</p>
     </div>
   </section>
   <!-- card section end -->
 
+
   <script src="index.js"></script>
+  <script src="feature.js"></script>
 </body>
 
 </html>

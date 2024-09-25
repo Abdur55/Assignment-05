@@ -1,19 +1,39 @@
 // add money to the account
+
+// Modal showing 
+const modal_one = document.getElementById('my_modal_1');
+const modal_two = document.getElementById('my_modal_2')
+const modal_three = document.getElementById('my_modal_3')
+
+
+
 document.getElementById('btn-add-money')
 .addEventListener('click', function(event){
     event.preventDefault()
-const inputAdd = document.getElementById('input-add-money').value;
-const parseInputAdd = parseFloat(inputAdd)
 
-const addToMoney = document.getElementById('add-to-money').innerText;
+    const inputAdd = document.getElementById('input-add-money').value;
+    const parseInputAdd = parseFloat(inputAdd)
+    const addToCash = document.getElementById('cash-out').innerText;
+
+if(isNaN(inputAdd)){
+    alert('Please enter a number')
+    return;
+}
+
+
+if(inputAdd <= addToCash && inputAdd >0){
+
+
+
+const addToMoney = parseFloat(document.getElementById('add-to-money').innerText);
 const parsAddToMoney = parseFloat(addToMoney)
 
 const total = parseInputAdd + parsAddToMoney;
-console.log(total)
+
 document.getElementById('add-to-money').innerText = total;
 
    
-const addToCash = document.getElementById('cash-out').innerText;
+
 
 const paresCashAdd = parseFloat(addToCash);
 
@@ -22,6 +42,12 @@ const totalCashOut = paresCashAdd - parseInputAdd;
 
 
 document.getElementById('cash-out').innerText = totalCashOut;
+
+    modal_one.showModal()
+
+}else{
+    alert('Please enter a valid amount in a number')
+}
 
 })
 
@@ -40,19 +66,35 @@ document.getElementById('btn2-add2-money2')
      const addMoney = document.getElementById('add-money').innerText;
      const paresMoney = parseFloat(addMoney)
     
-     const total = parse2Input2 + paresMoney;
- 
-
-     document.getElementById('add-money').innerText = total;
-
      const addToCash = document.getElementById('cash-out').innerText;
-
+   
      const paresCashAdd = parseFloat(addToCash);
 
-     const total2 =  paresCashAdd - parse2Input2;
+     if(isNaN(input2Add2)){
+        alert('Please enter a number')
+        return;
+    }
     
+    
+    if(input2Add2 <= addToCash && input2Add2 >0){
+        const total = parse2Input2 + paresMoney;
+ 
 
-     document.getElementById('cash-out').innerText = total2
+
+      
+
+        document.getElementById('add-money').innerText = total;
+   
+
+   
+        const total2 =  paresCashAdd - parse2Input2;
+       
+   
+        document.getElementById('cash-out').innerText = total2
+    }
+
+
+
 })
 
 

@@ -90,12 +90,12 @@ document.getElementById('btn2-add2-money2')
 
 
 
-            const addToMoney = parseFloat(document.getElementById('add-to-money').innerText);
+            const addToMoney = parseFloat(document.getElementById('add-money').innerText);
             const parsAddToMoney = parseFloat(addToMoney)
 
             const total = parse2Input2 + parsAddToMoney;
 
-            document.getElementById('add-to-money').innerText = total;
+            document.getElementById('add-money').innerText = total;
 
             const totalCashOut = addToCash - parse2Input2;
             document.getElementById('cash-out').innerText = totalCashOut;

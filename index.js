@@ -41,6 +41,21 @@ document.getElementById('btn-add-money')
             const totalCashOut = addToCash - parseInputAdd;
             document.getElementById('cash-out').innerText = totalCashOut;
 
+// Histories section will be showed =============================================================
+            const div = document.createElement('div');
+            div.classList.add('p-7','border', 'rounded-md');
+        
+            const h3 = document.createElement('h3');
+            h3.innerText = `${inputAdd} Tk  is Donated for famine-2024 at Noakhali, Bangladesh`;
+            div.appendChild(h3);
+        
+            const p = document.createElement('p');
+           p.innerText = `Date: ${getDateTime()}`
+        
+            div.append(p)
+        
+            document.getElementById('histories-page').appendChild(div)
+
 
         } else {
             alert('Please enter a valid amount number')
@@ -84,6 +99,22 @@ document.getElementById('btn2-add2-money2')
 
             const totalCashOut = addToCash - parse2Input2;
             document.getElementById('cash-out').innerText = totalCashOut;
+
+
+            // Histories section will be showed =============================================================
+            const div = document.createElement('div');
+            div.classList.add('p-7','border', 'rounded-md');
+        
+            const h3 = document.createElement('h3');
+            h3.innerText = `${input2Add2} Tk is Donated for famine-2024 in Feni, Bangladesh`;
+            div.appendChild(h3);
+        
+            const p = document.createElement('p');
+           p.innerText = `Date: ${getDateTime()}`
+        
+            div.append(p)
+        
+            document.getElementById('histories-page').appendChild(div)
 
 
         } else {
@@ -137,6 +168,21 @@ document.getElementById('btn3-add3-money3')
             document.getElementById('cash-out').innerText = total3;
 
 
+                        // Histories section will be showed =============================================================
+            const div = document.createElement('div');
+            div.classList.add('p-7','border', 'rounded-md');
+        
+            const h3 = document.createElement('h3');
+            h3.innerText = `${inputAdd3} Tk is Donated Aid for Injured in the Quota Movement in Bangladesh`;
+            div.appendChild(h3);
+        
+            const p = document.createElement('p');
+           p.innerText = `Date: ${getDateTime()}`
+        
+            div.append(p)
+        
+            document.getElementById('histories-page').appendChild(div)
+
         } else {
             alert('Please enter a valid amount number')
         }
@@ -145,21 +191,5 @@ document.getElementById('btn3-add3-money3')
 
 
 
-
-
-
-
-
-document.getElementById('btn3-add3-money3')
-    .addEventListener('click', function (event) {
-        event.preventDefault();
-
-
-    
-
-
-
-
-    })
 
 
